@@ -1,36 +1,17 @@
 #!/usr/bin/env python3
 
-while True:
-    try:
-        lengte_s = input("Geef aub. uw lengte in cm's: " )
-        lengte = int(lengte_s)
-    except Exception:
-        print("Geen geldige lengte, probeer opnieuw")
-    else:
-        break
-
-
-while True:
-
-    while True:
-        try:
-            gewicht_s = input("Geef aub. uw gewicht in kg's (0 is stop): " )
-            gewicht = int(gewicht_s)
-        except Exception:
-            print("Geen geldig gewicht, probeer opnieuw")
-        else:
-            break
-    if gewicht == 0:
-       break
-
+lengte = input("Geef aub. uw lengte in cm's: " )
+lengte = int(lengte)
+gewicht = input("Geef aub. uw gewicht in kg's: " )
+gewicht = int(gewicht)
+while gewicht>0:
     bmi = (100 * 100 * gewicht ) / (lengte * lengte)
-
-    bericht = ""
-
-    if bmi < 18:
-        bericht = "te laag"
-    elif bmi <=25:
-        bericht = "gezond"
+    print("Uw bmi is ", bmi)
+    if bmi<18:
+        print("Dat is te laag")
+    elif bmi<=25:
+        print("Dat is een gezonde bmi")
     else:
-        bericht = "te hoog"
-    print("Uw bmi is:", bmi, "en dat is", bericht)
+        print("Dat is te hoog")
+    gewicht = input("Geef aub. uw (streef-)gewicht in kg's: " )
+    gewicht = int(gewicht)

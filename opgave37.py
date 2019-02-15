@@ -9,6 +9,7 @@ mijndict = { 'een':1, 'twee':2, 'drie':3 }
 d_leeg = {}
 
 del mijndict['een']
+verwijderd = mijndict.pop("twee")
 
 maanden = { 1:'jan', 2: 'feb', 3:'mrt' }
 

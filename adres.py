@@ -1,8 +1,8 @@
-#! /usr/bin/env python
+#!/usr/bin/env python
 
 
-naam = 'Marko Draisma'
-adres = 'Schoenmakerstraat 62'
-plaats = 'Alkmaar'
+naam_en_adres = """Marko Draisma
+Schoenmakerstraat 62
+Alkmaar"""
 
-print(naam, adres, plaats, sep="\n")
+print(naam_en_adres)

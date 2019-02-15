@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 
 def telklinkers(s):
     """
@@ -8,11 +8,13 @@ def telklinkers(s):
     :return: int, Aantal klinkers in s
     """
     #
+    if not type(s) == str:
+        raise Exception("Geen string opgegeven.")
     nr_of_klinkers = 0
     for letter in s:
-       if letter.lower() in 'aeiou':
+       if letter.lower() in 'aeiouy':
             nr_of_klinkers += 1 
     return nr_of_klinkers
 
-in_str = input('Geef svp. een string, en ik vertel hoeveel klinkers erin zitten :') 
+in_str = input('Van welke tekst zal ik de klinkers tellen?\n\n> ') 
 print(telklinkers(in_str))

@@ -4,7 +4,7 @@ uurwaarden = uurwaarden.split(",")
 totaal = 0
 for nr, uur in enumerate(uurwaarden):
     uur = int(uur)
-    melding = "Uur %2d: %7d" % (nr+1, uur)
+    melding = "Uur {:2d}: {:7d}".format(nr+1, uur)
     print(melding)
     totaal += uur
 print("Totaal:", totaal)

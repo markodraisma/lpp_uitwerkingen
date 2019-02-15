@@ -1,13 +1,10 @@
-def telop(*getallen):
-    """
-    functie telop verwacht 0 of meer getallen.
-    param: getallen (tuple)
-    return: som
-    """
-    som = 0
-    for getal in getallen:
+def telop(a=0, b=0, *rest):
+    som = a + b
+    for getal in rest:
         som += getal
     return som
 
-print (telop())
-print(telop( 1,2,3,4 ))
+if __name__ == '__main__':
+    print("Test", telop(3,4))
+    print("Test", telop(5))
+    print("Test", telop(3,4,5,6))

@@ -14,8 +14,8 @@ class Artikel:
         return self.prijs
 
     def __str__(self):
-        return "Artikel met naam %s en prijs %s" % (self.naam, 
-                self.getprijs())
+        return "%-10s: %4.2f" % (self.naam, 
+                self.prijs)
 
 class ArtikelMetKorting(Artikel):
     def __init__(self, naam, prijs, korting):
@@ -26,7 +26,7 @@ class ArtikelMetKorting(Artikel):
         return self.prijs - self.prijs * self.korting / 100
 
     def __str__(self):
-        return super().__str__() + " (korting: %s %%)" % self.korting 
+        return "%-13s(-%s%%)" % (super().__str__(), self.korting) 
 
     
 class Kassa:
@@ -38,12 +38,12 @@ class Kassa:
         if isinstance(a, Artikel):
             totaal_artikelen = a.totaal(aantal)
             self.totaal+=totaal_artikelen
-            self.bon+="%7s: %5d x %7.2f = %9.2f\n" % (a.naam, aantal
-                    , a.getprijs()
+            self.bon+="%3d x %-22s = %9.2f\n" % (aantal
+                    , a.__str__()
                     , totaal_artikelen)
 
     def afrekenen(self):
-        self.bon+="Totaal:                 %12.2f" % self.totaal
+        self.bon+="Totaal:                     %12.2f" % self.totaal
         print(self.bon)
         self.totaal=0
         self.bon=""

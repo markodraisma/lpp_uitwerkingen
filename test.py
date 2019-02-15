@@ -1,4 +1,2 @@
-import sys
-argumenten = sys.argv
-for waarde in argumenten:
-    print(waarde)
+f = open("test.py")
+print(type(f))

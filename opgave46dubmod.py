@@ -10,7 +10,6 @@ def dubbelen(l_namen):
     l_dubbelen = []
     for idx,elem in enumerate(l_namen):
         if elem == vorige:
-            # print(idx)
             l_dubbelen.append(idx)
         else:
             vorige = elem
@@ -21,7 +20,6 @@ if __name__ == '__main__':
           'els', 'john', 'els', 'jan', 'els', 'henk']
     namen.sort()
     print('---', dubbelen(namen))
-    # print('gebruik: python3 opgave46duplicaten.py')
     print('Ik wordt nu direct aangeroepen! __name__ = ', __name__)
 else:
     print('Ik ben nu geïmporteerd! __name__ = ', __name__)

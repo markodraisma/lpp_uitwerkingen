@@ -1,18 +1,18 @@
 #!/usr/bin/env python3
 
-lengte_s = input("Geef aub. uw lengte in cm's: " )
-lengte = int(lengte_s)
-gewicht_s = input("Geef aub. uw gewicht in kg's: " )
-gewicht = int(gewicht_s)
+lengte = input("Geef aub. uw lengte in cm's: " )
+lengte = int(lengte)
+gewicht = input("Geef aub. uw gewicht in kg's: " )
+gewicht = int(gewicht)
 
 
 bmi = (100 * 100 * gewicht ) / (lengte * lengte)
 
-bericht = ""
+# bericht = ""
 
 if bmi < 18:
     bericht = "te laag"
-elif bmi <=25:
+elif bmi <25:
     bericht = "gezond"
 else:
     bericht = "te hoog"

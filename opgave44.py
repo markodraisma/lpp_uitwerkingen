@@ -2,24 +2,34 @@
 
 def dubbelen(l_namen):
     l_namen = l_namen[:]
-    gevonden = []
+    vorige = ''
     l_dubbelen = []
     for idx,elem in enumerate(namen):
-        if elem in gevonden:
+        if elem == vorige:
             # print(idx)
             l_dubbelen.append(idx)
         else:
-            gevonden.append(elem)
             vorige = elem
     return l_dubbelen
+
+
+def listuniq(lijst, dubbelen):
+#    teller = 0
+    for index in dubbelen[::-1]:
+        lijst.pop(index)
+#        teller += 1
 
 namen = [ 'jan', 'piet', 'henk', 'els', 'piet',
           'els', 'john', 'els', 'jan', 'els', 'henk']
 
-# namen.sort()
+namen.sort()
 
 print("De invoerlijst wordt:", namen)
 
 dublist = dubbelen(namen)
 
-print(dubbelen(namen))
+print(dublist)
+
+listuniq(namen, dublist)
+
+print("Na ontdubbelen:", namen)

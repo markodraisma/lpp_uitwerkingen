@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 
 lengte_s = input("Geef aub. uw lengte in cm's: " )
 lengte = int(lengte_s)

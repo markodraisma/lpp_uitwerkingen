@@ -13,7 +13,11 @@ for regel in f:
     regel = regel.rstrip()
     regel = regel.split("\t")
     print("{}: {} {}: {}".format(header[0],regel[0],
-                                header[1],regel[1]))
+                                header[1],regel[1]), end="")
+    if len(regel) == 3:
+        print("{}: {}".format(header[2],regel[2]))
+    else:
+        print()
 
 f.close()
 

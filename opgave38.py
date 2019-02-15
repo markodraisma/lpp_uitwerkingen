@@ -19,15 +19,20 @@ for regel in f:
 
 gemiddeld = temp_tot / aantal
 print("gemiddelde temperatuur:", gemiddeld)
-
-print("steden onder het gemiddelde:")
+laag = []
+hoog = []
+# keys = tuple(stad for stad in sorted(steden))
 for stad in sorted(steden):
     if steden[stad]<gemiddeld:
-        print(stad, steden[stad])
-print("steden boven of op het gemiddelde:")
-for stad in sorted(steden):
-    if steden[stad]>=gemiddeld:
-        print(stad, steden[stad])
+        laag.append(tuple([stad, steden[stad]]))
+    else:
+        hoog.append(tuple([stad, steden[stad]]))
+print("\nsteden onder het gemiddelde:")
+for k, v in laag:
+    print("{}: {}".format(k, v))
+print("\nsteden boven of op het gemiddelde:")
+for k, v in hoog:
+    print("{}: {}".format(k, v))
 
 f.close()
 
