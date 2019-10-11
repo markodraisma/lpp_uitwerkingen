@@ -1,0 +1,8 @@
+Er was eens, heel, héél lang geleden, in een land hier ver vandaan,
+een prachtig klein python scriptje. 
+Dat scriptje was nog een beetje verdrietig, 
+want het had een verhaaltje nodig, 
+en dat verhaaltje kon python niet vinden!
+Gelukkig was daar de de prins op het witte paard:
+hij verzon ter plekke een klein verhaaltje,
+en het scriptje leefde nog lang en gelukkig.

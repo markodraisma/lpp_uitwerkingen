@@ -3,7 +3,7 @@ mylist = [1,14,7,61,38,9,13]
 for getal in mylist:
     print(getal)
     
-
+print()
 for nummer, getal in enumerate(mylist):
     print("nr", nummer+1, "=", getal)
 
@@ -15,6 +15,6 @@ for getal in range(1, 11):
 
 
 print()
-for getal, uitkomst in enumerate(range(tafel, tafel*11, tafel)):
+for getal, uitkomst in enumerate(range(tafel, tafel*10+1, tafel)):
     print(getal+1, 'x', tafel, '=', uitkomst)
 

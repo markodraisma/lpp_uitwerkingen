@@ -1,18 +1,16 @@
 def priemen(max, aantal=0):
     teller = 0
     for getal in range (2, max):
-        priem=True
         for deler in range(2, getal):
-            if deler<getal and getal%deler == 0:
-                priem=False
+            if getal%deler == 0:
                 break                
-        if priem: 
+        else: 
             yield(getal)
             teller+=1
-        if aantal>0 and teller==aantal:
-            return
+            if aantal>0 and teller==aantal:
+                return
 
 
-priemgetallen = list( x for x in priemen(1000, 10))
+priemgetallen = list( x for x in priemen(100))
 
 print(priemgetallen)

@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 
 getallen = {'een':1}
-print(getallen['een'])
+print(getallen['een']) # verwachte uitkomst: 1
 
 getallen['twee']=2
-print(getallen['twee'])
+print(getallen['twee']) # verwachte uitkomst: 2
 
 
 getallen['een']='EEN'

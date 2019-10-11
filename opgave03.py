@@ -3,3 +3,9 @@ ezel = r"""\n n O
  /\/\ """
 
 print(ezel)
+
+print()
+
+print("\\n n O",
+" ====   pakezel",
+" /\\/\\", sep="\n")

@@ -23,3 +23,10 @@ i = -1
 while i >= -aantal:
     print(mylist[i], i)
     i -= 1
+
+
+
+
+
+
+

@@ -1,4 +1,4 @@
-a = "".join([chr(x) for x in range(ord('a'), ord('z'))])
+a = "".join([chr(x) for x in range(ord('a'), ord('z')+1)])
 print(a)
 print(a[2:4], "3e en 4e letter")
 print(a[2:10], "3e t/m 10e letter")

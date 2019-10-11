@@ -1,10 +1,14 @@
 uurwaarden = "673,1449,82,119341,13,996308,53,7,4711,2,189320"
 
 uurwaarden = uurwaarden.split(",")
-totaal = 0
+for index, uur in enumerate(uurwaarden):
+    uurwaarden[index] = int(uur)
+    
+totaal = sum(uurwaarden)
+
 for nr, uur in enumerate(uurwaarden):
-    uur = int(uur)
-    melding = "Uur %2d: %7d" % (nr+1, uur)
+   # uur = int(uur)
+    melding = "Uur %2d: %7d" % (nr + 1, uur)
     print(melding)
-    totaal += uur
+#   totaal += uur
 print("Totaal:", totaal)

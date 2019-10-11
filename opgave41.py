@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 def gemiddelde(lijst):
     lijst = lijst[:]
     som = sum(lijst)

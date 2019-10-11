@@ -5,6 +5,14 @@ def telop(a=0, b=0, *rest):
     return som
 
 if __name__ == '__main__':
-    print("Test", telop(3,4))
-    print("Test", telop(5))
-    print("Test", telop(3,4,5,6))
+    import sys
+    getallen = sys.argv[1:]
+    getallen2 = []
+    for getal in getallen:
+        getallen2.append(float(getal))
+    print(telop(*getallen2))
+
+#   of in één keer:
+#   print(telop(*map(float,sys.argv[1:])))
+        
+

@@ -2,11 +2,16 @@
 
 
 mijndict = { 'een':1, 'twee':2, 'drie':3 }
-#   waarde = mijndict[sleutel]
+sleutel = "een"
+waarde = mijndict[sleutel]
 
-# waarde = mijndict.get(sleutel)
+waarde = mijndict.get(sleutel)
 
 d_leeg = {}
+s_leeg = set([])
+
+print(d_leeg)
+print(s_leeg)
 
 del mijndict['een']
 verwijderd = mijndict.pop("twee")
@@ -17,6 +22,8 @@ for maand in maanden:
     # print(maand)
     print(maand, maanden[maand])
 
+for nr, naam in maanden.items():
+    print(nr, naam)
 
 
 

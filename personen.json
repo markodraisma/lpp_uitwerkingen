@@ -1,0 +1,26 @@
+[
+  {
+    "naam": {
+      "voornaam": "Dagobert",
+      "achternaam": "Duck"
+    },
+    "adres": {
+      "straatnaam": "Krulplein",
+      "huisnummer": 1,
+      "postcode": "1111 AA",
+      "plaatsnaam": "Duckstad"
+    }
+  },
+  {
+    "naam": {
+      "voornaam": "Mickey",
+      "achternaam": "Mouse"
+    },
+    "adres": {
+      "straatnaam": "Onder de bomen",
+      "huisnummer": 2,
+      "postcode": "1110 AA",
+      "plaatsnaam": "Duckstad"
+    }
+  }
+]

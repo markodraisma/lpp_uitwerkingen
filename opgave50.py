@@ -1,43 +1,25 @@
-#!/usr/bin/env python3
-
+bewoners = {'Thea' : 1926, 'Berendien' : 1919, 'Bertha' : 1912,
+            'Theo' : 1923, 'Annegien'  : 1899, 'Gretha' : 1926}
 import time
+annonu = time.localtime().tm_year
+# annonu = 1900
+# Voeg hieronder de code toe die de 100+ers laat zien.
 
-class ParameterError(TypeError):
-    pass
-
-def zoek100plus(d_bewoners, annonu):
-    fout = False
+def zoek100plus(d_bewoners, jaar):
     fouten = []
-    if not type(d_bewoners) == dict:
-        fouten.append("Eerste parameter zou een dict moeten zijn, maar was %s" % type(d_bewoners))
-        fout = True
-    if not type(annonu) == int:
-        fouten.append("Tweede parameter zou een int moeten zijn, maar was %s" % type(annonu))
-        fout = True
-    if fout:
-        raise ParameterError(tuple(fouten))
-    gevonden = []
-    d_bewoners = d_bewoners.copy()
+    if type(d_bewoners) != dict:
+        fouten.append("TypeError: Type van eerste argument moet een dict zijn")
+    if type(jaar) != int:
+        fouten.append("TypeError: Type van tweede argument moet een int zijn")
+    if len(fouten)>0:
+        raise TypeError(tuple(fouten))
     for naam in d_bewoners:
-        geboortejaar = d_bewoners[naam]
-        leeftijd = annonu - geboortejaar
-        print('DEBUG:', naam, geboortejaar)
-        if leeftijd >= 100:
-            # persoon is ouder dan 100!
-            print('DEBUG: >= 100!', leeftijd)
-            gevonden.append(naam)
-    return tuple(gevonden)
-
-bewoners = {'Thea': 1926, 'Berendien': 1919, 'Bertha': 1912,
-            'Theo': 1923, 'Annegien': 1899, 'Gretha': 1926 }
-
-jaargetal = time.localtime().tm_year
-
-print(zoek100plus(bewoners, jaargetal))
+        geboortedatum = d_bewoners[naam]
+        leeftijd = jaar - geboortedatum
+        if leeftijd >=100 :
+            print(naam, "is 100 of ouder, namelijk", leeftijd, "Hoera!")
 
 try:
-    print(zoek100plus(['jan', 'piet'],'2019'))
-except TypeError as e:
-    print("Er ging iets mis: ", e.args)
-finally:
-    print("Eindelijk klaar")
+    zoek100plus(['jan', 'piet'], '2019')
+except TypeError as te:
+    print(te.args)

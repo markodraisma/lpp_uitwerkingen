@@ -1,14 +1,17 @@
+# Haal extensie af van de naam (alleen rechter deel na de punt, als die bestaat)
+
 bestanden = ['limerick.txt', 'news.1.pdf', 'verhaal']
+
 for bestand in bestanden:
     delen = bestand.split(".")
     if len(delen)>1:
         delen.pop()
-    print(".".join(delen));
+    print(".".join(delen))
 print()
 
 for bestand in bestanden:
     delen = bestand.rsplit(".",1)
-    print(delen[0]);
+    print(delen[0])
 
 print()
 for bestand in bestanden:

@@ -1,20 +1,16 @@
 #!/usr/bin/env python3
 
 def counter(filename):
-
     try:
         fh = open(filename,'rt', encoding="UTF-8")
     except Exception:
         import sys
         print('File %s not found!' % filename)
         raise 
-
     nr_of_lines = 0
     nr_of_words = 0
     nr_of_chars = 0
     nr_of_bytes = 0
-
-
     for line in fh:
         nr_of_lines += 1
         words = line.split()

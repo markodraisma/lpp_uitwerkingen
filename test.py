@@ -1,2 +1,2 @@
-f = open("test.py")
-print(type(f))
+import sys
+print(sys.argv)

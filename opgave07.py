@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 
-lijst = [1,5,2,33,5,16,7]
+lijst = [100,50,2000,33,5,16,7]
+print("de inhoud van de lijst is:", lijst)
 
 totaal = sum(lijst)
 aantal = len(lijst)
-gemiddelde = totaal/aantal
-print(gemiddelde)
-print(round(gemiddelde, 2))
+gemiddelde = totaal /aantal
 
-aantal_5 = lijst.count(5)
-print(aantal_5)
+print("de gemiddelde waarde is:", gemiddelde)
+afgerond = round( int(gemiddelde), -1 )
+print("afgerond op tientallen is dat :", afgerond)

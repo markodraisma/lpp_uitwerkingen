@@ -19,6 +19,9 @@ class Medium(object):
         print('Titel: ', self.titel)
         print('Prijs: ', self.prijs)
 
+    def __str__(self):
+        return "Titel: %s, Prijs: %s" % (self.titel, self.prijs)
+
 class Boek(Medium):
     """Een boek klasse
     """

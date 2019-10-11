@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 while True:
     try:
         lengte = input("Geef aub. uw lengte in cm's: " )
@@ -11,10 +9,9 @@ while True:
             print("Geen geldige lengte, buiten range 50cm-250cm")
         else:
             break
-
+# nu hebben we een geldige lengte
 
 while True:
-
     while True:
         try:
             gewicht = input("Geef aub. uw gewicht in kg's (0 is stop): " )
@@ -22,12 +19,16 @@ while True:
         except Exception:
             print("Geen geldig gewicht, probeer opnieuw")
         else:
-            break
+            if gewicht < 0 or gewicht > 500:
+                print("Geen geldige waarde, of zo")
+            else:
+                break
+
+    # nu hebben we een geldig gewicht
     if gewicht == 0:
        break
 
-    bmi = (100 * 100 * gewicht ) / (lengte * lengte)
-
+    bmi = 100 * 100 * gewicht  / lengte ** 2
     if bmi < 18:
         bericht = "te laag"
     elif bmi <=25:

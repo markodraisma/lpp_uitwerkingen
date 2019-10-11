@@ -12,3 +12,5 @@ print("De invoerlijst wordt:", namen)
 dublist = dm.dubbelen(namen)
 
 print(dublist)
+print("documentatie bij module:", dm.__doc__)
+print("documentatie bij functie:", dm.dubbelen.__doc__)

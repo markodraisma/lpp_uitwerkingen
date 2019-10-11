@@ -1,0 +1,8 @@
+#! /usr/bin/env python3
+
+import sys
+all = sys.stdin.readlines()
+all.sort()
+for line in all:
+    line = "{:{align}{width}}".format(line,align=">",width=30)
+    sys.stdout.writelines(line)

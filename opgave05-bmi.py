@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 
-lengte_s = input("Geef aub. uw lengte in cm's: " )
-lengte = int(lengte_s)
-gewicht_s = input("Geef aub. uw gewicht in kg's: " )
-gewicht = int(gewicht_s)
+lengte = input("Geef aub. uw lengte in cm's: " )
+lengte = int(lengte)
+gewicht = float(input("Geef aub. uw gewicht in kg's: " ))
+# gewicht = int(gewicht)
 
 
-bmi = (100 * 100 * gewicht ) / (lengte * lengte)
+bmi = 100 * 100 * gewicht  / lengte ** 2
 
-print(bmi)
+print("Uw BMI is:", bmi)

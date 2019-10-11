@@ -1,0 +1,6 @@
+UID        PID  PPID  C STIME TTY          TIME CMD
+marko        8     7  0 08:37 tty1     00:00:00 -bash
+marko     4947     8  0 11:34 tty1     00:00:00 ps -ef
+marko     4948     8  0 11:34 tty1     00:00:00 python3 voorbeeld.py
+root         1     0  0 08:37 ?        00:00:00 /init ro
+root         7     1  0 08:37 tty1     00:00:00 /init ro

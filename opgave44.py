@@ -14,10 +14,8 @@ def dubbelen(l_namen):
 
 
 def listuniq(lijst, dubbelen):
-#    teller = 0
     for index in dubbelen[::-1]:
         lijst.pop(index)
-#        teller += 1
 
 namen = [ 'jan', 'piet', 'henk', 'els', 'piet',
           'els', 'john', 'els', 'jan', 'els', 'henk']

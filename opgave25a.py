@@ -1,7 +1,8 @@
-uurwaarden = "673,1449,82,119341,13,996308,53,7,4711,2,189320"
+uurwaarden = "673,1449,82,100019341,13,996308,53,7,4711,2,189320"
 
 uurwaarden = uurwaarden.split(",")
 totaal = 0
+# totaal = sum(map(int,uurwaarden))
 for uur in uurwaarden:
     totaal+=int(uur)
 lengte = len(str(totaal))

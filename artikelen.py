@@ -15,7 +15,7 @@ class Artikel:
 
     def __str__(self):
         return "%-10s: %4.2f" % (self.naam, 
-                self.prijs)
+                self.getprijs())
 
 class ArtikelMetKorting(Artikel):
     def __init__(self, naam, prijs, korting):

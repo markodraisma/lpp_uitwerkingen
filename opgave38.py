@@ -4,35 +4,43 @@ except Exception:
     import sys
     sys.exit("Foutje")
 
-temp_tot = 0;
-aantal = 0
+#temp_tot = 0;
+#aantal = 0
 steden = {}
 for regel in f:
     if regel[0] == '#':
         continue
     regel = regel.split()
-    temp = float(regel[-1])
+    try:
+        temp = float(regel[-1])
+    except Exception:
+        continue
     stad = " ".join(regel[:-1])
     steden[stad]=temp
-    aantal +=1
-    temp_tot += temp
+  #  aantal +=1
+  #  temp_tot += temp
 
-gemiddeld = temp_tot / aantal
+gemiddeld = sum(steden.values()) / len(steden)
 print("gemiddelde temperatuur:", gemiddeld)
 laag = []
 hoog = []
-# keys = tuple(stad for stad in sorted(steden))
 for stad in sorted(steden):
-    if steden[stad]<gemiddeld:
-        laag.append(tuple([stad, steden[stad]]))
+    temp = steden[stad]
+    if temp<gemiddeld:
+        laag.append(tuple([stad, temp]))
     else:
-        hoog.append(tuple([stad, steden[stad]]))
+        hoog.append(tuple([stad, temp]))
+
+#print(laag)
+#print()
+#print(hoog)
+
 print("\nsteden onder het gemiddelde:")
-for k, v in laag:
-    print("{}: {}".format(k, v))
+for s, t in laag:
+    print("{}: {}".format(s, t))
 print("\nsteden boven of op het gemiddelde:")
-for k, v in hoog:
-    print("{}: {}".format(k, v))
+for s, t in hoog:
+    print("{}: {}".format(s, t))
 
 f.close()
 
