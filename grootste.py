@@ -1,17 +1,15 @@
-#! /usr/bin/env python3
-# bepaal de grootste van drie getallen
+v1 = input("Geef eerste getal: ")
+v2 = input("Geef tweede getal: ")
+v3 = input("Geef derde getal: ")
 
-getal1 = input("Geef het eerste getal: ")
-getal2 = input("Geef het tweede getal: ")
-getal3 = input("Geef het derde getal: ")
-hoogste = 0
+print(v1, v2, v3)
 
-if getal1 > getal2:
-    hoogste = getal1
+if v1 > v2:
+    grootste = v1
 else:
-    hoogste = getal2
+    grootste = v2
 
-if getal3 > hoogste:
-    hoogste = getal3
+if v3 > grootste:
+    grootste = v3
 
-print("De hoogste waarde was:", hoogste)
+print("De hoogste waarde was: ", grootste)

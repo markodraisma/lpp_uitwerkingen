@@ -5,9 +5,9 @@ filename = 'verhaal.txt'
 try:
     fh = open(filename,'r')
 except Exception:
-    import system
+    import sys
     print('File %s not found!' % filename)
-    system.exit()
+    sys.exit()
 
 nr_of_lines = 0
 nr_of_words = 0
@@ -25,3 +25,10 @@ for line in fh:
 print('\nFile %s has %d lines, %d words, %d characters' % \
         (filename, nr_of_lines, nr_of_words, nr_of_chars))    
 fh.close()
+
+
+
+
+
+
+

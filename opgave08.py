@@ -14,5 +14,4 @@ a = [1,2,3]
 b = a
 c = a[:]
 d = [a, c]
-
-print(d[0][1])
+print(d)

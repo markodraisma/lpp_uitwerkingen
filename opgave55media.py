@@ -47,6 +47,9 @@ class Boek(Medium):
         super().show()
         print('Auteur: ', self.auteur)
         print('Paginas: ', self.paginas)
+		
+    def __str__(self):
+        return super().__str__() + "\nAuteur: %s, Paginas: %s" % (self.auteur, self.paginas)
 
 class Strip(Boek):
     
@@ -60,6 +63,9 @@ class Strip(Boek):
     def show(self):
         super().show()
         print('Tekenaar: ', self.tekenaar)
+		
+    def __str__(self):
+	    return super().__str__() + "\nTekenaar: %s" % self.tekenaar 
         
 
 if __name__ == '__main__':
@@ -74,4 +80,5 @@ if __name__ == '__main__':
 
     leapr.show()    # druk leapr af
     astrx.show()
+    print(astrx)
 # spody.show()

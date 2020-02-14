@@ -2,37 +2,39 @@ while True:
     try:
         lengte = input("Geef aub. uw lengte in cm's: " )
         lengte = int(lengte)
+        gewicht = input("Geef aub. uw gewicht in kg's: " )
+        gewicht = int(gewicht)
     except Exception:
-        print("Geen geldige lengte, probeer opnieuw")
-    else:
-        if lengte <50 or lengte>250:
-            print("Geen geldige lengte, buiten range 50cm-250cm")
-        else:
-            break
-# nu hebben we een geldige lengte
+        print("Gebruik alleen gehele getallen")
+    else:  
+        break
 
 while True:
+    if gewicht == 0:
+        break
+    bmi = (100 * 100 * gewicht ) / (lengte * lengte)
+    print("Uw bmi is ", bmi)
+    if bmi<18:
+        print("Dat is te laag")
+    elif bmi<=25:
+        print("Dat is een gezonde bmi")
+    else:
+        print("Dat is te hoog")
     while True:
         try:
-            gewicht = input("Geef aub. uw gewicht in kg's (0 is stop): " )
+            gewicht = input("Geef aub. uw (streef-)gewicht in kg's: " )
             gewicht = int(gewicht)
         except Exception:
-            print("Geen geldig gewicht, probeer opnieuw")
+            print("gebruik alleen gehele getallen")
         else:
-            if gewicht < 0 or gewicht > 500:
-                print("Geen geldige waarde, of zo")
-            else:
-                break
+            break
 
-    # nu hebben we een geldig gewicht
-    if gewicht == 0:
-       break
+print("Einde oefening")
 
-    bmi = 100 * 100 * gewicht  / lengte ** 2
-    if bmi < 18:
-        bericht = "te laag"
-    elif bmi <=25:
-        bericht = "gezond"
-    else:
-        bericht = "te hoog"
-    print("Uw bmi is:", bmi, "en dat is", bericht,"\n")
+
+
+
+
+
+
+

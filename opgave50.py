@@ -12,7 +12,7 @@ def zoek100plus(d_bewoners, jaar):
     if type(jaar) != int:
         fouten.append("TypeError: Type van tweede argument moet een int zijn")
     if len(fouten)>0:
-        raise TypeError(tuple(fouten))
+        raise TypeError(*fouten)
     for naam in d_bewoners:
         geboortedatum = d_bewoners[naam]
         leeftijd = jaar - geboortedatum
@@ -21,5 +21,12 @@ def zoek100plus(d_bewoners, jaar):
 
 try:
     zoek100plus(['jan', 'piet'], '2019')
+except TypeError as te:
+    for fout in te.args:
+        print(fout)
+    print()
+
+try:
+    zoek100plus(bewoners, 2020)
 except TypeError as te:
     print(te.args)

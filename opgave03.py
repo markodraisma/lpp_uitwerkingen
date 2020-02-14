@@ -4,8 +4,8 @@ ezel = r"""\n n O
 
 print(ezel)
 
-print()
+# print()
 
 print("\\n n O",
-" ====   pakezel",
+" ====    pakezel",
 " /\\/\\", sep="\n")

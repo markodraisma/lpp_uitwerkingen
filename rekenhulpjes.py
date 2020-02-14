@@ -14,14 +14,8 @@ def macht(grondgetal, exponent):
     '''
     return grondgetal ** exponent
 
-
 if __name__ == "__main__":
-    print("3 tot de macht 4 is:", macht(3,4))
-    print("5 plus 6 is:", telop(5,6))
+    print(telop(3,4)) # verwachte waarde: 7
+    print(macht(3,0)) # verwachte waarde: 1
 else:
-    print("__name__ is nu:", __name__)
-
-
-
-
-
+     print("module %s is geïmporteerd" % __name__)

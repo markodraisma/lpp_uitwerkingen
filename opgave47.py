@@ -9,10 +9,10 @@ def myrange(start, end, step=1):
             yield huidig
             huidig += step
     else:
-        return;
+        return
 
 
-tientallen = [ x for x in myrange(100,-1,-10) ]
+tientallen = [ x for x in myrange(0, 101,10) ]
 print(tientallen)
 
 

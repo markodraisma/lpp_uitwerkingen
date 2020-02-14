@@ -5,7 +5,7 @@ def priemen(max, aantal=0):
             if getal%deler == 0:
                 break                
         else: 
-            yield(getal)
+            yield getal
             teller+=1
             if aantal>0 and teller==aantal:
                 return

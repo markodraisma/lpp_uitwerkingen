@@ -12,7 +12,7 @@ bmi = 100 * 100 * gewicht  / (lengte * lengte)
 
 if bmi < 18:
     bericht = "te laag"
-elif bmi<25:
+elif bmi < 25:
     bericht = "gezond"
 else :
     bericht = "te hoog"

@@ -1,7 +1,8 @@
-lengte =  input("Wat is uw lengte: ")
-gewicht = input("Wat is uw gewicht: ")
+lengte = input("Wat is uw lengte (in cm)? ")
+gewicht = input("Wat is uw gewicht (in kg)? ")
 lengte = int(lengte)
-gewicht = int(gewicht)
-bmi = (100*100*gewicht) / (lengte * lengte)
+gewicht = float(gewicht)
 
-print("Uw BMI is", bmi)
+bmi = (100 * 100 * gewicht) / (lengte * lengte)
+
+print(bmi)

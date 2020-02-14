@@ -3,9 +3,10 @@ import sys
 
 if len(sys.argv) == 2:
     try:
-        interval = float(sys.argv[1])
-    except Exception as e:
-        raise Exception('waarde is niet numeriek')
+        arg = sys.argv[1]
+        interval = float(arg)
+    except ValueError:
+        sys.exit  ('waarde is niet numeriek')
 else:
     raise Exception('Geef een interval in seconden mee')
 
@@ -15,7 +16,7 @@ else:
 
 while True:
     try:
-        print(time.strftime('%Y/%m/%d  %H:%M:%S  Bingggg', time.localtime()))
+        print(time.strftime('%d-%m-%Y  %H:%M:%S  Bingggg', time.localtime()))
         time.sleep(interval)
     except KeyboardInterrupt:
         break

@@ -1,8 +1,34 @@
 #!/usr/bin/env python3
 
-namen = ['els', 'els', 'els', 'els', 'henk', 'henk', 'jan', 'jan', 'john',
-         'piet', 'piet']
+namen = ['els', 'els', "jan", 'els', 'henk', 'henk', 'jan',"john", 'jan', 'john',
+         'piet', 'Piet', 'els']
 
+# namen.sort()
+
+namen = list(map(lambda s: s.upper(), namen))
+
+# gezien = []
+for index, naam in enumerate(namen):
+    if index >  namen.index(naam):                 # naam = jan, gezien =['els'], dus False
+        print(index, naam)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"""
 for i in range(0,len(namen)):
     if i == 0: 
         continue
@@ -41,3 +67,4 @@ for(i, naam) in enumerate(namen):
         gezien.append(naam)
 
 print(gezien)
+"""

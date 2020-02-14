@@ -1,8 +1,11 @@
-#!/usr/bin/env python
+naam = "Marko Draisma"
+adres = "Schoenmakerstraat 62"
+postcode = "1825 CG"
+plaats = "Alkmaar"
 
+print(naam)
+print(adres)
+print(postcode, plaats)
+print()
 
-naam_en_adres = """Marko Draisma
-Schoenmakerstraat 62
-Alkmaar"""
-
-print(naam_en_adres)
+# print("Marko Draisma", "Schoenmakerstraat 62", "1825 CG  Alkmaar", sep="\n")

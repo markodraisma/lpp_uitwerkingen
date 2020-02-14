@@ -9,7 +9,7 @@ for nummer, getal in enumerate(mylist):
 
 print()
 
-tafel = 5
+tafel = 7
 for getal in range(1, 11):
     print(getal, 'x', tafel, '=', getal*tafel)
 

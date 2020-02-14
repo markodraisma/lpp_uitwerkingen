@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 mylist = [1,14,7,61,38,9,13]
-
+mylist = mylist[::-1]
 aantal = len(mylist)
 
 print("Inhoud lijst:")
@@ -23,6 +23,9 @@ i = -1
 while i >= -aantal:
     print(mylist[i], i)
     i -= 1
+
+
+
 
 
 

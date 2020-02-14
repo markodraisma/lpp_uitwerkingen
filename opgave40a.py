@@ -16,6 +16,6 @@ def telklinkers(s):
             nr_of_klinkers += 1 
     return nr_of_klinkers
 
-#in_str = input('Van welke tekst zal ik de klinkers tellen?\n\n> ') 
-#print(telklinkers(in_str))
+in_str = input('Van welke tekst zal ik de klinkers tellen?\n\n> ') 
+print(telklinkers(in_str))
 print(telklinkers(12345))

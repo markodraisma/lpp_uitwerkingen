@@ -1,14 +1,13 @@
 vraag = input("Stel een vraag: ") 
-vraag = vraag.rstrip()
-vraag = vraag.rstrip("?")
-vraag = vraag.rstrip()
-woord = vraag.split().pop()
-woord = woord[1:]
-medeklinkers = 'bcdfghjklmnpqrstvwxz'
-medeklinkers += medeklinkers.upper()
-while woord[0] in medeklinkers:
-    woord = woord[1:]
-# of:
-# woord = woord.lstrip(medeklinkers)
-woord = woord.capitalize()
-print(woord)
+vraag = vraag.rstrip(" ?")      # verwijder spaties en vraagtekens aan het eind
+woorden = vraag.split()
+if len(woorden)>0:
+    woord = woorden.pop()       # neem het laatste woord
+    woord = woord[1:]           # verwijder eerste letter
+    medeklinkers = 'bcdfghjklmnpqrstvwxz'
+    medeklinkers += medeklinkers.upper()
+    woord = woord.lstrip(medeklinkers)  # verwijder begin-medeklinkers 
+    woord = woord.capitalize()  # laat resultaat met hoofletter beginnen
+    print(woord)
+else:
+    print("Er is geen vraag opgegeven.")

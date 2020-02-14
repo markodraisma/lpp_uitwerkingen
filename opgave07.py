@@ -8,5 +8,5 @@ aantal = len(lijst)
 gemiddelde = totaal /aantal
 
 print("de gemiddelde waarde is:", gemiddelde)
-afgerond = round( int(gemiddelde), -1 )
-print("afgerond op tientallen is dat :", afgerond)
+afgerond = round( gemiddelde, -1)
+print("afgerond is dat :", afgerond)
